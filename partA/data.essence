@@ -1,0 +1,47 @@
+language Essence 1.3
+
+letting weightLimit be 20
+letting volumeLimit be 40
+letting numItems be 10
+
+
+letting weights be function(
+    1 --> 2,
+    2 --> 4,
+    3 --> 1,
+    4 --> 6,
+    5 --> 1,
+    6 --> 1,
+    7 --> 8,
+    8 --> 5,
+    9 --> 10,
+    10 --> 2
+)
+
+
+letting volumes be function(
+    1 --> 3,
+    2 --> 5,
+    3 --> 2,
+    4 --> 12,
+    5 --> 1,
+    6 --> 1,
+    7 --> 20,
+    8 --> 6,
+    9 --> 25,
+    10 --> 3
+)
+
+
+letting impacts be function(
+    1 --> 10,
+    2 --> 12,
+    3 --> 8,
+    4 --> 15,
+    5 --> 7,
+    6 --> 6,
+    7 --> 16,
+    8 --> 14,
+    9 --> 20,
+    10 --> 9
+)

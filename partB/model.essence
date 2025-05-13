@@ -1,0 +1,18 @@
+language Essence 1.3
+
+given weightLimit, volumeLimit : int
+given numItems : int
+
+letting items be domain int(1..numItems)
+
+given weights : function (total) items --> int
+given volumes : function (total) items --> int
+given impacts : function (total) items --> int
+
+find selected : set of items
+
+maximising sum i in selected . impacts(i)
+
+such that
+    (sum i in selected . weights(i)) <= weightLimit,
+    (sum i in selected . volumes(i)) <= volumeLimit

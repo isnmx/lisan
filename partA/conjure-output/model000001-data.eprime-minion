@@ -1,0 +1,40 @@
+MINION 3
+# CSETopLevel_number = 0
+# CSETopLevel_eliminated_expressions = 0
+# CSETopLevel_total_size = 0
+# CSE_active_number = 0
+# CSE_active_eliminated_expressions = 0
+# CSE_active_total_size = 0
+**VARIABLES**
+BOOL selected_Occurrence_00001 #
+BOOL selected_Occurrence_00002 #
+BOOL selected_Occurrence_00003 #
+BOOL selected_Occurrence_00004 #
+BOOL selected_Occurrence_00005 #
+BOOL selected_Occurrence_00006 #
+BOOL selected_Occurrence_00007 #
+BOOL selected_Occurrence_00008 #
+BOOL selected_Occurrence_00009 #
+BOOL selected_Occurrence_00010 #
+DISCRETE aux0 #(10*selected_Occurrence_00001 + 12*selected_Occurrence_00002 + 8*selected_Occurrence_00003 + 15*selected_Occurrence_00004 + 7*selected_Occurrence_00005 + 6*selected_Occurrence_00006 + 16*selected_Occurrence_00007 + 14*selected_Occurrence_00008 + 20*selected_Occurrence_00009 + 9*selected_Occurrence_00010)
+{0..97}
+**CONSTRAINTS**
+w-inintervalset(aux0, [0,0,6,10,12,97])
+**VARIABLES**
+**VARIABLES**
+ALIAS weights_Function1D[10]=[2, 4, 1, 6, 1, 1, 8, 5, 10, 2]
+**VARIABLES**
+ALIAS volumes_Function1D[10]=[3, 5, 2, 12, 1, 1, 20, 6, 25, 3]
+**VARIABLES**
+ALIAS impacts_Function1D[10]=[10, 12, 8, 15, 7, 6, 16, 14, 20, 9]
+**SEARCH**
+PRINT[[selected_Occurrence_00001],[selected_Occurrence_00002],[selected_Occurrence_00003],[selected_Occurrence_00004],[selected_Occurrence_00005],[selected_Occurrence_00006],[selected_Occurrence_00007],[selected_Occurrence_00008],[selected_Occurrence_00009],[selected_Occurrence_00010],[aux0]]
+MAXIMISING aux0
+VARORDER STATIC [selected_Occurrence_00001, selected_Occurrence_00002, selected_Occurrence_00003, selected_Occurrence_00004, selected_Occurrence_00005, selected_Occurrence_00006, selected_Occurrence_00007, selected_Occurrence_00008, selected_Occurrence_00009, selected_Occurrence_00010]
+VARORDER STATIC [selected_Occurrence_00001,selected_Occurrence_00002,selected_Occurrence_00003,selected_Occurrence_00004,selected_Occurrence_00005,selected_Occurrence_00006,selected_Occurrence_00007,selected_Occurrence_00008,selected_Occurrence_00009,selected_Occurrence_00010,aux0]
+**CONSTRAINTS**
+weightedsumleq([2,4,1,6,1,1,8,5,10,2],[selected_Occurrence_00001,selected_Occurrence_00002,selected_Occurrence_00003,selected_Occurrence_00004,selected_Occurrence_00005,selected_Occurrence_00006,selected_Occurrence_00007,selected_Occurrence_00008,selected_Occurrence_00009,selected_Occurrence_00010],20)
+weightedsumleq([3,5,2,12,1,1,20,6,25,3],[selected_Occurrence_00001,selected_Occurrence_00002,selected_Occurrence_00003,selected_Occurrence_00004,selected_Occurrence_00005,selected_Occurrence_00006,selected_Occurrence_00007,selected_Occurrence_00008,selected_Occurrence_00009,selected_Occurrence_00010],40)
+weightedsumleq([10,12,8,15,7,6,16,14,20,9],[selected_Occurrence_00001,selected_Occurrence_00002,selected_Occurrence_00003,selected_Occurrence_00004,selected_Occurrence_00005,selected_Occurrence_00006,selected_Occurrence_00007,selected_Occurrence_00008,selected_Occurrence_00009,selected_Occurrence_00010],aux0)
+weightedsumgeq([10,12,8,15,7,6,16,14,20,9],[selected_Occurrence_00001,selected_Occurrence_00002,selected_Occurrence_00003,selected_Occurrence_00004,selected_Occurrence_00005,selected_Occurrence_00006,selected_Occurrence_00007,selected_Occurrence_00008,selected_Occurrence_00009,selected_Occurrence_00010],aux0)
+**EOF**
