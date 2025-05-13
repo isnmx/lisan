@@ -1,0 +1,54 @@
+MINION 3
+# CSETopLevel_number = 0
+# CSETopLevel_eliminated_expressions = 0
+# CSETopLevel_total_size = 0
+# CSE_active_number = 0
+# CSE_active_eliminated_expressions = 0
+# CSE_active_total_size = 0
+**VARIABLES**
+BOOL selected_Occurrence_00001 #
+BOOL selected_Occurrence_00002 #
+BOOL selected_Occurrence_00003 #
+BOOL selected_Occurrence_00004 #
+BOOL selected_Occurrence_00005 #
+BOOL selected_Occurrence_00006 #
+BOOL selected_Occurrence_00007 #
+BOOL selected_Occurrence_00008 #
+BOOL selected_Occurrence_00009 #
+BOOL selected_Occurrence_00010 #
+BOOL selected_Occurrence_00011 #
+BOOL selected_Occurrence_00012 #
+BOOL selected_Occurrence_00013 #
+BOOL selected_Occurrence_00014 #
+BOOL selected_Occurrence_00015 #
+BOOL selected_Occurrence_00016 #
+BOOL selected_Occurrence_00017 #
+BOOL selected_Occurrence_00018 #
+BOOL selected_Occurrence_00019 #
+BOOL selected_Occurrence_00020 #
+DISCRETE aux0 #(8*selected_Occurrence_00001 + 7*selected_Occurrence_00002 + 8*selected_Occurrence_00003 + 8*selected_Occurrence_00004 + 8*selected_Occurrence_00005 + 7*selected_Occurrence_00006 + 9*selected_Occurrence_00007 + 10*selected_Occurrence_00008 + 7*selected_Occurrence_00009 + 4*selected_Occurrence_00010 + 6*selected_Occurrence_00011 + 5*selected_Occurrence_00012 + 9*selected_Occurrence_00013 + 7*selected_Occurrence_00014 + 6*selected_Occurrence_00015 + 8*selected_Occurrence_00016 + 5*selected_Occurrence_00017 + 7*selected_Occurrence_00018 + 6*selected_Occurrence_00019 + 8*selected_Occurrence_00020)
+{0..143}
+**CONSTRAINTS**
+w-inintervalset(aux0, [0,0,4,139,143,143])
+**VARIABLES**
+**VARIABLES**
+ALIAS weights_FunctionAsRelation_RelationAsSet_Explicit_1[20]=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+**VARIABLES**
+ALIAS weights_FunctionAsRelation_RelationAsSet_Explicit_2[20]=[500, 500, 600, 200, 1000, 700, 900, 1000, 500, 1000, 300, 400, 800, 250, 350, 750, 950, 550, 650, 450]
+**VARIABLES**
+ALIAS impacts_FunctionAsRelation_RelationAsSet_Explicit_1[20]=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+**VARIABLES**
+ALIAS impacts_FunctionAsRelation_RelationAsSet_Explicit_2[20]=[8, 7, 8, 8, 8, 7, 9, 10, 7, 4, 6, 5, 9, 7, 6, 8, 5, 7, 6, 8]
+**VARIABLES**
+ALIAS volumes_FunctionAsRelation_RelationAsSet_Explicit_2[20]=[1000, 1000, 1500, 500, 1500, 1000, 1600, 1200, 700, 2000, 600, 800, 1700, 400, 900, 1100, 1800, 850, 950, 750]
+**VARIABLES**
+ALIAS volumes_FunctionAsRelation_RelationAsSet_Explicit_1[20]=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+**SEARCH**
+PRINT[[selected_Occurrence_00001],[selected_Occurrence_00002],[selected_Occurrence_00003],[selected_Occurrence_00004],[selected_Occurrence_00005],[selected_Occurrence_00006],[selected_Occurrence_00007],[selected_Occurrence_00008],[selected_Occurrence_00009],[selected_Occurrence_00010],[selected_Occurrence_00011],[selected_Occurrence_00012],[selected_Occurrence_00013],[selected_Occurrence_00014],[selected_Occurrence_00015],[selected_Occurrence_00016],[selected_Occurrence_00017],[selected_Occurrence_00018],[selected_Occurrence_00019],[selected_Occurrence_00020],[aux0]]
+MAXIMISING aux0
+**CONSTRAINTS**
+weightedsumleq([20,20,30,10,30,20,32,24,14,40,12,16,34,8,18,22,36,17,19,15],[selected_Occurrence_00001,selected_Occurrence_00002,selected_Occurrence_00003,selected_Occurrence_00004,selected_Occurrence_00005,selected_Occurrence_00006,selected_Occurrence_00007,selected_Occurrence_00008,selected_Occurrence_00009,selected_Occurrence_00010,selected_Occurrence_00011,selected_Occurrence_00012,selected_Occurrence_00013,selected_Occurrence_00014,selected_Occurrence_00015,selected_Occurrence_00016,selected_Occurrence_00017,selected_Occurrence_00018,selected_Occurrence_00019,selected_Occurrence_00020],120)
+weightedsumleq([10,10,12,4,20,14,18,20,10,20,6,8,16,5,7,15,19,11,13,9],[selected_Occurrence_00001,selected_Occurrence_00002,selected_Occurrence_00003,selected_Occurrence_00004,selected_Occurrence_00005,selected_Occurrence_00006,selected_Occurrence_00007,selected_Occurrence_00008,selected_Occurrence_00009,selected_Occurrence_00010,selected_Occurrence_00011,selected_Occurrence_00012,selected_Occurrence_00013,selected_Occurrence_00014,selected_Occurrence_00015,selected_Occurrence_00016,selected_Occurrence_00017,selected_Occurrence_00018,selected_Occurrence_00019,selected_Occurrence_00020],120)
+weightedsumleq([8,7,8,8,8,7,9,10,7,4,6,5,9,7,6,8,5,7,6,8],[selected_Occurrence_00001,selected_Occurrence_00002,selected_Occurrence_00003,selected_Occurrence_00004,selected_Occurrence_00005,selected_Occurrence_00006,selected_Occurrence_00007,selected_Occurrence_00008,selected_Occurrence_00009,selected_Occurrence_00010,selected_Occurrence_00011,selected_Occurrence_00012,selected_Occurrence_00013,selected_Occurrence_00014,selected_Occurrence_00015,selected_Occurrence_00016,selected_Occurrence_00017,selected_Occurrence_00018,selected_Occurrence_00019,selected_Occurrence_00020],aux0)
+weightedsumgeq([8,7,8,8,8,7,9,10,7,4,6,5,9,7,6,8,5,7,6,8],[selected_Occurrence_00001,selected_Occurrence_00002,selected_Occurrence_00003,selected_Occurrence_00004,selected_Occurrence_00005,selected_Occurrence_00006,selected_Occurrence_00007,selected_Occurrence_00008,selected_Occurrence_00009,selected_Occurrence_00010,selected_Occurrence_00011,selected_Occurrence_00012,selected_Occurrence_00013,selected_Occurrence_00014,selected_Occurrence_00015,selected_Occurrence_00016,selected_Occurrence_00017,selected_Occurrence_00018,selected_Occurrence_00019,selected_Occurrence_00020],aux0)
+**EOF**

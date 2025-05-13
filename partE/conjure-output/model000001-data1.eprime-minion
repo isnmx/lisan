@@ -1,0 +1,44 @@
+MINION 3
+# CSETopLevel_number = 0
+# CSETopLevel_eliminated_expressions = 0
+# CSETopLevel_total_size = 0
+# CSE_active_number = 0
+# CSE_active_eliminated_expressions = 0
+# CSE_active_total_size = 0
+**VARIABLES**
+BOOL selected_Occurrence_00001 #
+BOOL selected_Occurrence_00002 #
+BOOL selected_Occurrence_00003 #
+BOOL selected_Occurrence_00004 #
+BOOL selected_Occurrence_00005 #
+BOOL selected_Occurrence_00006 #
+BOOL selected_Occurrence_00007 #
+BOOL selected_Occurrence_00008 #
+BOOL selected_Occurrence_00009 #
+BOOL selected_Occurrence_00010 #
+DISCRETE aux0 #(8*selected_Occurrence_00001 + 7*selected_Occurrence_00002 + 8*selected_Occurrence_00003 + 8*selected_Occurrence_00004 + 8*selected_Occurrence_00005 + 7*selected_Occurrence_00006 + 9*selected_Occurrence_00007 + 10*selected_Occurrence_00008 + 7*selected_Occurrence_00009 + 4*selected_Occurrence_00010)
+{0..76}
+**CONSTRAINTS**
+w-inintervalset(aux0, [0,0,4,4,7,69,72,72,76,76])
+**VARIABLES**
+**VARIABLES**
+ALIAS weights_FunctionAsRelation_RelationAsSet_Explicit_1[10]=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+**VARIABLES**
+ALIAS weights_FunctionAsRelation_RelationAsSet_Explicit_2[10]=[500, 500, 600, 200, 1000, 700, 900, 1000, 500, 1000]
+**VARIABLES**
+ALIAS impacts_FunctionAsRelation_RelationAsSet_Explicit_1[10]=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+**VARIABLES**
+ALIAS impacts_FunctionAsRelation_RelationAsSet_Explicit_2[10]=[8, 7, 8, 8, 8, 7, 9, 10, 7, 4]
+**VARIABLES**
+ALIAS volumes_FunctionAsRelation_RelationAsSet_Explicit_2[10]=[1000, 1000, 1500, 500, 1500, 1000, 1600, 1200, 700, 2000]
+**VARIABLES**
+ALIAS volumes_FunctionAsRelation_RelationAsSet_Explicit_1[10]=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+**SEARCH**
+PRINT[[selected_Occurrence_00001],[selected_Occurrence_00002],[selected_Occurrence_00003],[selected_Occurrence_00004],[selected_Occurrence_00005],[selected_Occurrence_00006],[selected_Occurrence_00007],[selected_Occurrence_00008],[selected_Occurrence_00009],[selected_Occurrence_00010],[aux0]]
+MAXIMISING aux0
+**CONSTRAINTS**
+weightedsumleq([5,5,6,2,10,7,9,10,5,10],[selected_Occurrence_00001,selected_Occurrence_00002,selected_Occurrence_00003,selected_Occurrence_00004,selected_Occurrence_00005,selected_Occurrence_00006,selected_Occurrence_00007,selected_Occurrence_00008,selected_Occurrence_00009,selected_Occurrence_00010],60)
+weightedsumleq([10,10,15,5,15,10,16,12,7,20],[selected_Occurrence_00001,selected_Occurrence_00002,selected_Occurrence_00003,selected_Occurrence_00004,selected_Occurrence_00005,selected_Occurrence_00006,selected_Occurrence_00007,selected_Occurrence_00008,selected_Occurrence_00009,selected_Occurrence_00010],60)
+weightedsumleq([8,7,8,8,8,7,9,10,7,4],[selected_Occurrence_00001,selected_Occurrence_00002,selected_Occurrence_00003,selected_Occurrence_00004,selected_Occurrence_00005,selected_Occurrence_00006,selected_Occurrence_00007,selected_Occurrence_00008,selected_Occurrence_00009,selected_Occurrence_00010],aux0)
+weightedsumgeq([8,7,8,8,8,7,9,10,7,4],[selected_Occurrence_00001,selected_Occurrence_00002,selected_Occurrence_00003,selected_Occurrence_00004,selected_Occurrence_00005,selected_Occurrence_00006,selected_Occurrence_00007,selected_Occurrence_00008,selected_Occurrence_00009,selected_Occurrence_00010],aux0)
+**EOF**

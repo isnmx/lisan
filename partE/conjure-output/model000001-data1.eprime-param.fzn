@@ -1,0 +1,22 @@
+array [1..10] of int: weights_FunctionAsRelation_RelationAsSet_Explicit_1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+array [1..10] of int: weights_FunctionAsRelation_RelationAsSet_Explicit_2 = [500, 500, 600, 200, 1000, 700, 900, 1000, 500, 1000];
+array [1..10] of int: impacts_FunctionAsRelation_RelationAsSet_Explicit_1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+array [1..10] of int: impacts_FunctionAsRelation_RelationAsSet_Explicit_2 = [8, 7, 8, 8, 8, 7, 9, 10, 7, 4];
+array [1..10] of int: volumes_FunctionAsRelation_RelationAsSet_Explicit_2 = [1000, 1000, 1500, 500, 1500, 1000, 1600, 1200, 700, 2000];
+array [1..10] of int: volumes_FunctionAsRelation_RelationAsSet_Explicit_1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var {0,1}: selected_Occurrence_00001_INTEGER :: output_var ;
+var {0,1}: selected_Occurrence_00002_INTEGER :: output_var ;
+var {0,1}: selected_Occurrence_00003_INTEGER :: output_var ;
+var {0,1}: selected_Occurrence_00004_INTEGER :: output_var ;
+var {0,1}: selected_Occurrence_00005_INTEGER :: output_var ;
+var {0,1}: selected_Occurrence_00006_INTEGER :: output_var ;
+var {0,1}: selected_Occurrence_00007_INTEGER :: output_var ;
+var {0,1}: selected_Occurrence_00008_INTEGER :: output_var ;
+var {0,1}: selected_Occurrence_00009_INTEGER :: output_var ;
+var {0,1}: selected_Occurrence_00010_INTEGER :: output_var ;
+var {0,4,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68}: aux0:: var_is_introduced ;
+constraint int_lin_eq([-1,8,7,8,8,8,7,9,10,7,4],[aux0,selected_Occurrence_00001_INTEGER,selected_Occurrence_00002_INTEGER,selected_Occurrence_00003_INTEGER,selected_Occurrence_00004_INTEGER,selected_Occurrence_00005_INTEGER,selected_Occurrence_00006_INTEGER,selected_Occurrence_00007_INTEGER,selected_Occurrence_00008_INTEGER,selected_Occurrence_00009_INTEGER,selected_Occurrence_00010_INTEGER],0);
+constraint int_lin_le([5,5,6,2,10,7,9,10,5,10,-1],[selected_Occurrence_00001_INTEGER,selected_Occurrence_00002_INTEGER,selected_Occurrence_00003_INTEGER,selected_Occurrence_00004_INTEGER,selected_Occurrence_00005_INTEGER,selected_Occurrence_00006_INTEGER,selected_Occurrence_00007_INTEGER,selected_Occurrence_00008_INTEGER,selected_Occurrence_00009_INTEGER,selected_Occurrence_00010_INTEGER,60],0);
+constraint int_lin_le([10,10,15,5,15,10,16,12,7,20,-1],[selected_Occurrence_00001_INTEGER,selected_Occurrence_00002_INTEGER,selected_Occurrence_00003_INTEGER,selected_Occurrence_00004_INTEGER,selected_Occurrence_00005_INTEGER,selected_Occurrence_00006_INTEGER,selected_Occurrence_00007_INTEGER,selected_Occurrence_00008_INTEGER,selected_Occurrence_00009_INTEGER,selected_Occurrence_00010_INTEGER,60],0);
+
+solve :: int_search([selected_Occurrence_00001_INTEGER, selected_Occurrence_00002_INTEGER, selected_Occurrence_00003_INTEGER, selected_Occurrence_00004_INTEGER, selected_Occurrence_00005_INTEGER, selected_Occurrence_00006_INTEGER, selected_Occurrence_00007_INTEGER, selected_Occurrence_00008_INTEGER, selected_Occurrence_00009_INTEGER, selected_Occurrence_00010_INTEGER], input_order, indomain_min, complete)maximize aux0;

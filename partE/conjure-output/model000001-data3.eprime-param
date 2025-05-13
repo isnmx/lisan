@@ -1,0 +1,33 @@
+language ESSENCE' 1.0
+
+letting numItems be 30
+letting impacts_FunctionAsRelation_RelationAsSet_Explicit_1 be
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30;
+             int(1..30)]
+letting impacts_FunctionAsRelation_RelationAsSet_Explicit_2 be
+        [8, 7, 8, 8, 8, 7, 9, 10, 7, 4, 6, 5, 9, 7, 6, 8, 5, 7, 6, 8, 7, 6, 9, 5, 7, 8, 6, 5, 4, 6; int(1..30)]
+letting weights_FunctionAsRelation_RelationAsSet_Explicit_1 be
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30;
+             int(1..30)]
+letting weights_FunctionAsRelation_RelationAsSet_Explicit_2 be
+        [500, 500, 600, 200, 1000, 700, 900, 1000, 500, 1000, 300, 400, 800, 250, 350, 750, 950, 550, 650, 450, 380,
+         420, 580, 680, 480, 520, 720, 320, 880, 280;
+             int(1..30)]
+letting weightLimit be 6000
+letting volumes_FunctionAsRelation_RelationAsSet_Explicit_1 be
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30;
+             int(1..30)]
+letting volumes_FunctionAsRelation_RelationAsSet_Explicit_2 be
+        [1000, 1000, 1500, 500, 1500, 1000, 1600, 1200, 700, 2000, 600, 800, 1700, 400, 900, 1100, 1800, 850, 950, 750,
+         650, 950, 1250, 550, 850, 1050, 1150, 350, 1650, 450;
+             int(1..30)]
+letting volumeLimit be 6000
+letting fin1 be 30
+letting fin2 be 200
+letting fin3 be 1000
+letting fin4 be 30
+letting fin5 be 350
+letting fin6 be 2000
+letting fin7 be 30
+letting fin8 be 4
+letting fin9 be 10
