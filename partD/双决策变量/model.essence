@@ -1,0 +1,27 @@
+language Essence 1.3
+
+given weightLimit, volumeLimit : int
+given numItems : int
+
+letting items be domain int(1..numItems)
+
+given weights : function (total) items --> int
+given volumes : function (total) items --> int
+given impacts : function (total) items --> int
+
+find bag1 : set of items
+find bag2 : set of items
+
+maximising sum i in bag1 . impacts(i) + sum i in bag2 . impacts(i)
+
+such that
+
+    forAll i : int(1..numItems) . !(i in bag1 /\ i in bag2),
+    
+
+    (sum i in bag1 . weights(i)) <= weightLimit / 2,
+    (sum i in bag1 . volumes(i)) <= volumeLimit / 2,
+    
+
+    (sum i in bag2 . weights(i)) <= weightLimit / 2,
+    (sum i in bag2 . volumes(i)) <= volumeLimit / 2

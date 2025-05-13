@@ -1,0 +1,44 @@
+MINION 3
+# CSETopLevel_number = 0
+# CSETopLevel_eliminated_expressions = 0
+# CSETopLevel_total_size = 0
+# CSE_active_number = 0
+# CSE_active_eliminated_expressions = 0
+# CSE_active_total_size = 0
+**VARIABLES**
+BOOL selected_Occurrence_00001 #
+BOOL selected_Occurrence_00002 #
+BOOL selected_Occurrence_00003 #
+BOOL selected_Occurrence_00004 #
+BOOL selected_Occurrence_00005 #
+BOOL selected_Occurrence_00006 #
+BOOL selected_Occurrence_00007 #
+BOOL selected_Occurrence_00008 #
+BOOL selected_Occurrence_00009 #
+BOOL selected_Occurrence_00010 #
+BOOL selected_Occurrence_00011 #
+DISCRETE aux0 #(8*selected_Occurrence_00001 + 7*selected_Occurrence_00002 + 8*selected_Occurrence_00003 + 8*selected_Occurrence_00004 + 8*selected_Occurrence_00005 + 7*selected_Occurrence_00006 + 9*selected_Occurrence_00007 + 10*selected_Occurrence_00008 + 7*selected_Occurrence_00009 + 4*selected_Occurrence_00010 + 5*selected_Occurrence_00011)
+{8..73}
+**VARIABLES**
+ALIAS itemCategory_Function1D[11]=[1, 3, 3, 3, 2, 2, 2, 1, 1, 4, 4]
+**VARIABLES**
+ALIAS weights_Function1D[11]=[500, 500, 600, 200, 1000, 700, 900, 1000, 500, 1000, 700]
+**VARIABLES**
+ALIAS volumes_Function1D[11]=[1000, 1000, 1500, 500, 1500, 1000, 1600, 1200, 700, 2000, 1000]
+**VARIABLES**
+ALIAS impacts_Function1D[11]=[8, 7, 8, 8, 8, 7, 9, 10, 7, 4, 5]
+**SEARCH**
+PRINT[[selected_Occurrence_00001],[selected_Occurrence_00002],[selected_Occurrence_00003],[selected_Occurrence_00004],[selected_Occurrence_00005],[selected_Occurrence_00006],[selected_Occurrence_00007],[selected_Occurrence_00008],[selected_Occurrence_00009],[selected_Occurrence_00010],[selected_Occurrence_00011],[aux0]]
+MAXIMISING aux0
+VARORDER STATIC [selected_Occurrence_00001, selected_Occurrence_00002, selected_Occurrence_00003, selected_Occurrence_00004, selected_Occurrence_00005, selected_Occurrence_00006, selected_Occurrence_00007, selected_Occurrence_00008, selected_Occurrence_00009, selected_Occurrence_00010, selected_Occurrence_00011]
+VARORDER STATIC [selected_Occurrence_00001,selected_Occurrence_00002,selected_Occurrence_00003,selected_Occurrence_00004,selected_Occurrence_00005,selected_Occurrence_00006,selected_Occurrence_00007,selected_Occurrence_00008,selected_Occurrence_00009,selected_Occurrence_00010,selected_Occurrence_00011,aux0]
+**CONSTRAINTS**
+weightedsumleq([5,5,6,2,10,7,9,10,5,10,7],[selected_Occurrence_00001,selected_Occurrence_00002,selected_Occurrence_00003,selected_Occurrence_00004,selected_Occurrence_00005,selected_Occurrence_00006,selected_Occurrence_00007,selected_Occurrence_00008,selected_Occurrence_00009,selected_Occurrence_00010,selected_Occurrence_00011],60)
+watched-or({w-literal(selected_Occurrence_00001,1),w-literal(selected_Occurrence_00008,1),w-literal(selected_Occurrence_00009,1)})
+watched-or({w-literal(selected_Occurrence_00002,1),w-literal(selected_Occurrence_00003,1),w-literal(selected_Occurrence_00004,1)})
+watched-or({w-literal(selected_Occurrence_00005,1),w-literal(selected_Occurrence_00006,1),w-literal(selected_Occurrence_00007,1)})
+weightedsumleq([10,10,15,5,15,10,16,12,7,20,10],[selected_Occurrence_00001,selected_Occurrence_00002,selected_Occurrence_00003,selected_Occurrence_00004,selected_Occurrence_00005,selected_Occurrence_00006,selected_Occurrence_00007,selected_Occurrence_00008,selected_Occurrence_00009,selected_Occurrence_00010,selected_Occurrence_00011],60)
+watched-or({w-literal(selected_Occurrence_00010,1),w-literal(selected_Occurrence_00011,1)})
+weightedsumleq([8,7,8,8,8,7,9,10,7,4,5],[selected_Occurrence_00001,selected_Occurrence_00002,selected_Occurrence_00003,selected_Occurrence_00004,selected_Occurrence_00005,selected_Occurrence_00006,selected_Occurrence_00007,selected_Occurrence_00008,selected_Occurrence_00009,selected_Occurrence_00010,selected_Occurrence_00011],aux0)
+weightedsumgeq([8,7,8,8,8,7,9,10,7,4,5],[selected_Occurrence_00001,selected_Occurrence_00002,selected_Occurrence_00003,selected_Occurrence_00004,selected_Occurrence_00005,selected_Occurrence_00006,selected_Occurrence_00007,selected_Occurrence_00008,selected_Occurrence_00009,selected_Occurrence_00010,selected_Occurrence_00011],aux0)
+**EOF**

@@ -1,0 +1,4 @@
+language ESSENCE' 1.0
+
+letting bag1_Occurrence be [false, true, false, false, false, true, false, false, true, false, false; int(1..11)]
+letting bag2_Occurrence be [true, false, false, true, false, false, false, true, false, false, false; int(1..11)]

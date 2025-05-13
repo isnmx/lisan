@@ -1,0 +1,278 @@
+language ESSENCE' 1.0
+
+given weightLimit: int
+given volumeLimit: int
+given numItems: int
+given fin1: int
+given fin2: int
+given fin3: int
+given weights_Function1D: matrix indexed by [int(1..numItems)] of int(fin2..fin3)
+given fin4: int
+given fin5: int
+given fin6: int
+given volumes_Function1D: matrix indexed by [int(1..numItems)] of int(fin5..fin6)
+given fin7: int
+given fin8: int
+given fin9: int
+given impacts_Function1D: matrix indexed by [int(1..numItems)] of int(fin8..fin9)
+find bag1_Occurrence: matrix indexed by [int(1..numItems)] of bool
+find bag2_Occurrence: matrix indexed by [int(1..numItems)] of bool
+branching on [bag1_Occurrence, bag2_Occurrence]
+maximising
+    sum([toInt(bag1_Occurrence[i]) *
+         catchUndef(impacts_Function1D[i] +
+                    sum([toInt(bag2_Occurrence[shadow2]) * catchUndef(impacts_Function1D[shadow2], 0)
+                             | shadow2 : int(1..numItems)]),
+                    0)
+             | i : int(1..numItems)])
+such that
+    and([!(bag1_Occurrence[i] /\ bag2_Occurrence[i]) | i : int(1..numItems)]),
+    sum([toInt(bag1_Occurrence[i]) * catchUndef(weights_Function1D[i], 0) | i : int(1..numItems)]) <= weightLimit / 2,
+    sum([toInt(bag1_Occurrence[i]) * catchUndef(volumes_Function1D[i], 0) | i : int(1..numItems)]) <= volumeLimit / 2,
+    sum([toInt(bag2_Occurrence[i]) * catchUndef(weights_Function1D[i], 0) | i : int(1..numItems)]) <= weightLimit / 2,
+    sum([toInt(bag2_Occurrence[i]) * catchUndef(volumes_Function1D[i], 0) | i : int(1..numItems)]) <= volumeLimit / 2
+
+$ Conjure's
+$ {"finds": [{"Name": "bag1"}, {"Name": "bag2"}],
+$  "givens":
+$      [{"Name": "weightLimit"}, {"Name": "volumeLimit"}, {"Name": "numItems"}, {"Name": "weights"}, {"Name": "volumes"},
+$       {"Name": "impacts"}],
+$  "enumGivens": [], "enumLettings": [],
+$  "lettings":
+$      [[{"Name": "items"},
+$        {"Domain":
+$             {"DomainInt":
+$                  [{"TagInt": []},
+$                   [{"RangeBounded":
+$                         [{"Constant": {"ConstantInt": [{"TagInt": []}, 1]}},
+$                          {"Reference":
+$                               [{"Name": "numItems"},
+$                                {"DeclNoRepr":
+$                                     ["Given", {"Name": "numItems"}, {"DomainInt": [{"TagInt": []}, []]},
+$                                      {"NoRegion": []}]}]}]}]]}}]],
+$  "unnameds": [], "strategyQ": {"PickFirst": []}, "strategyA": {"Compact": []},
+$  "trailCompact":
+$      [[1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1],
+$       [1, 1, 1], [1, 1, 4], [1, 1, 4], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1],
+$       [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1],
+$       [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1],
+$       [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1]],
+$  "nameGenState": [["fin", 10], ["q", 3], ["shadow", 3]], "nbExtraGivens": 9,
+$  "representations":
+$      [[{"MachineName": ["fin", 1, []]}, {"DomainInt": [{"TagInt": []}, []]}],
+$       [{"Name": "numItems"}, {"DomainInt": [{"TagInt": []}, []]}],
+$       [{"MachineName": ["fin", 2, []]}, {"DomainInt": [{"TagInt": []}, []]}],
+$       [{"MachineName": ["fin", 3, []]}, {"DomainInt": [{"TagInt": []}, []]}],
+$       [{"MachineName": ["fin", 4, []]}, {"DomainInt": [{"TagInt": []}, []]}],
+$       [{"MachineName": ["fin", 5, []]}, {"DomainInt": [{"TagInt": []}, []]}],
+$       [{"MachineName": ["fin", 6, []]}, {"DomainInt": [{"TagInt": []}, []]}],
+$       [{"MachineName": ["fin", 7, []]}, {"DomainInt": [{"TagInt": []}, []]}],
+$       [{"MachineName": ["fin", 8, []]}, {"DomainInt": [{"TagInt": []}, []]}],
+$       [{"MachineName": ["fin", 9, []]}, {"DomainInt": [{"TagInt": []}, []]}],
+$       [{"Name": "impacts"},
+$        {"DomainFunction":
+$             [{"Function_1D": []},
+$              [{"SizeAttr_Size":
+$                    {"Reference":
+$                         [{"MachineName": ["fin", 7, []]},
+$                          {"DeclHasRepr":
+$                               ["Given", {"MachineName": ["fin", 7, []]}, {"DomainInt": [{"TagInt": []}, []]}]}]}},
+$               "PartialityAttr_Total", "JectivityAttr_None"],
+$              {"DomainInt":
+$                   [{"TagInt": []},
+$                    [{"RangeBounded":
+$                          [{"Constant": {"ConstantInt": [{"TagInt": []}, 1]}},
+$                           {"Reference":
+$                                [{"Name": "numItems"},
+$                                 {"DeclHasRepr":
+$                                      ["Given", {"Name": "numItems"}, {"DomainInt": [{"TagInt": []}, []]}]}]}]}]]},
+$              {"DomainInt":
+$                   [{"TagInt": []},
+$                    [{"RangeBounded":
+$                          [{"Reference":
+$                                [{"MachineName": ["fin", 8, []]},
+$                                 {"DeclHasRepr":
+$                                      ["Given", {"MachineName": ["fin", 8, []]}, {"DomainInt": [{"TagInt": []}, []]}]}]},
+$                           {"Reference":
+$                                [{"MachineName": ["fin", 9, []]},
+$                                 {"DeclHasRepr":
+$                                      ["Given", {"MachineName": ["fin", 9, []]},
+$                                       {"DomainInt": [{"TagInt": []}, []]}]}]}]}]]}]}],
+$       [{"Name": "bag2"},
+$        {"DomainSet":
+$             [{"Set_Occurrence": []}, {"SizeAttr_None": []},
+$              {"DomainInt":
+$                   [{"TagInt": []},
+$                    [{"RangeBounded":
+$                          [{"Constant": {"ConstantInt": [{"TagInt": []}, 1]}},
+$                           {"Reference":
+$                                [{"Name": "numItems"},
+$                                 {"DeclHasRepr":
+$                                      ["Given", {"Name": "numItems"}, {"DomainInt": [{"TagInt": []}, []]}]}]}]}]]}]}],
+$       [{"Name": "bag1"},
+$        {"DomainSet":
+$             [{"Set_Occurrence": []}, {"SizeAttr_None": []},
+$              {"DomainInt":
+$                   [{"TagInt": []},
+$                    [{"RangeBounded":
+$                          [{"Constant": {"ConstantInt": [{"TagInt": []}, 1]}},
+$                           {"Reference":
+$                                [{"Name": "numItems"},
+$                                 {"DeclHasRepr":
+$                                      ["Given", {"Name": "numItems"}, {"DomainInt": [{"TagInt": []}, []]}]}]}]}]]}]}],
+$       [{"Name": "weights"},
+$        {"DomainFunction":
+$             [{"Function_1D": []},
+$              [{"SizeAttr_Size":
+$                    {"Reference":
+$                         [{"MachineName": ["fin", 1, []]},
+$                          {"DeclHasRepr":
+$                               ["Given", {"MachineName": ["fin", 1, []]}, {"DomainInt": [{"TagInt": []}, []]}]}]}},
+$               "PartialityAttr_Total", "JectivityAttr_None"],
+$              {"DomainInt":
+$                   [{"TagInt": []},
+$                    [{"RangeBounded":
+$                          [{"Constant": {"ConstantInt": [{"TagInt": []}, 1]}},
+$                           {"Reference":
+$                                [{"Name": "numItems"},
+$                                 {"DeclHasRepr":
+$                                      ["Given", {"Name": "numItems"}, {"DomainInt": [{"TagInt": []}, []]}]}]}]}]]},
+$              {"DomainInt":
+$                   [{"TagInt": []},
+$                    [{"RangeBounded":
+$                          [{"Reference":
+$                                [{"MachineName": ["fin", 2, []]},
+$                                 {"DeclHasRepr":
+$                                      ["Given", {"MachineName": ["fin", 2, []]}, {"DomainInt": [{"TagInt": []}, []]}]}]},
+$                           {"Reference":
+$                                [{"MachineName": ["fin", 3, []]},
+$                                 {"DeclHasRepr":
+$                                      ["Given", {"MachineName": ["fin", 3, []]},
+$                                       {"DomainInt": [{"TagInt": []}, []]}]}]}]}]]}]}],
+$       [{"Name": "weightLimit"}, {"DomainInt": [{"TagInt": []}, []]}],
+$       [{"Name": "volumes"},
+$        {"DomainFunction":
+$             [{"Function_1D": []},
+$              [{"SizeAttr_Size":
+$                    {"Reference":
+$                         [{"MachineName": ["fin", 4, []]},
+$                          {"DeclHasRepr":
+$                               ["Given", {"MachineName": ["fin", 4, []]}, {"DomainInt": [{"TagInt": []}, []]}]}]}},
+$               "PartialityAttr_Total", "JectivityAttr_None"],
+$              {"DomainInt":
+$                   [{"TagInt": []},
+$                    [{"RangeBounded":
+$                          [{"Constant": {"ConstantInt": [{"TagInt": []}, 1]}},
+$                           {"Reference":
+$                                [{"Name": "numItems"},
+$                                 {"DeclHasRepr":
+$                                      ["Given", {"Name": "numItems"}, {"DomainInt": [{"TagInt": []}, []]}]}]}]}]]},
+$              {"DomainInt":
+$                   [{"TagInt": []},
+$                    [{"RangeBounded":
+$                          [{"Reference":
+$                                [{"MachineName": ["fin", 5, []]},
+$                                 {"DeclHasRepr":
+$                                      ["Given", {"MachineName": ["fin", 5, []]}, {"DomainInt": [{"TagInt": []}, []]}]}]},
+$                           {"Reference":
+$                                [{"MachineName": ["fin", 6, []]},
+$                                 {"DeclHasRepr":
+$                                      ["Given", {"MachineName": ["fin", 6, []]},
+$                                       {"DomainInt": [{"TagInt": []}, []]}]}]}]}]]}]}],
+$       [{"Name": "volumeLimit"}, {"DomainInt": [{"TagInt": []}, []]}]],
+$  "representationsTree":
+$      [[{"Name": "bag1"}, [{"rootLabel": {"Set_Occurrence": []}, "subForest": [{"rootLabel": null, "subForest": []}]}]],
+$       [{"Name": "bag2"}, [{"rootLabel": {"Set_Occurrence": []}, "subForest": [{"rootLabel": null, "subForest": []}]}]],
+$       [{"MachineName": ["fin", 1, []]}, [{"rootLabel": null, "subForest": []}]],
+$       [{"MachineName": ["fin", 2, []]}, [{"rootLabel": null, "subForest": []}]],
+$       [{"MachineName": ["fin", 3, []]}, [{"rootLabel": null, "subForest": []}]],
+$       [{"MachineName": ["fin", 4, []]}, [{"rootLabel": null, "subForest": []}]],
+$       [{"MachineName": ["fin", 5, []]}, [{"rootLabel": null, "subForest": []}]],
+$       [{"MachineName": ["fin", 6, []]}, [{"rootLabel": null, "subForest": []}]],
+$       [{"MachineName": ["fin", 7, []]}, [{"rootLabel": null, "subForest": []}]],
+$       [{"MachineName": ["fin", 8, []]}, [{"rootLabel": null, "subForest": []}]],
+$       [{"MachineName": ["fin", 9, []]}, [{"rootLabel": null, "subForest": []}]],
+$       [{"Name": "impacts"},
+$        [{"rootLabel": {"Function_1D": []},
+$          "subForest": [{"rootLabel": null, "subForest": []}, {"rootLabel": null, "subForest": []}]}]],
+$       [{"Name": "numItems"}, [{"rootLabel": null, "subForest": []}]],
+$       [{"Name": "volumeLimit"}, [{"rootLabel": null, "subForest": []}]],
+$       [{"Name": "volumes"},
+$        [{"rootLabel": {"Function_1D": []},
+$          "subForest": [{"rootLabel": null, "subForest": []}, {"rootLabel": null, "subForest": []}]}]],
+$       [{"Name": "weightLimit"}, [{"rootLabel": null, "subForest": []}]],
+$       [{"Name": "weights"},
+$        [{"rootLabel": {"Function_1D": []},
+$          "subForest": [{"rootLabel": null, "subForest": []}, {"rootLabel": null, "subForest": []}]}]]],
+$  "originalDomains":
+$      [[{"Name": "weightLimit"}, {"DomainInt": [{"TagInt": []}, []]}],
+$       [{"Name": "volumeLimit"}, {"DomainInt": [{"TagInt": []}, []]}],
+$       [{"Name": "numItems"}, {"DomainInt": [{"TagInt": []}, []]}],
+$       [{"Name": "weights"},
+$        {"DomainFunction":
+$             [[], [{"SizeAttr_None": []}, "PartialityAttr_Total", "JectivityAttr_None"],
+$              {"DomainInt":
+$                   [{"TagInt": []},
+$                    [{"RangeBounded":
+$                          [{"Constant": {"ConstantInt": [{"TagInt": []}, 1]}},
+$                           {"Reference": [{"Name": "numItems"}, null]}]}]]},
+$              {"DomainInt": [{"TagInt": []}, []]}]}],
+$       [{"Name": "volumes"},
+$        {"DomainFunction":
+$             [[], [{"SizeAttr_None": []}, "PartialityAttr_Total", "JectivityAttr_None"],
+$              {"DomainInt":
+$                   [{"TagInt": []},
+$                    [{"RangeBounded":
+$                          [{"Constant": {"ConstantInt": [{"TagInt": []}, 1]}},
+$                           {"Reference": [{"Name": "numItems"}, null]}]}]]},
+$              {"DomainInt": [{"TagInt": []}, []]}]}],
+$       [{"Name": "impacts"},
+$        {"DomainFunction":
+$             [[], [{"SizeAttr_None": []}, "PartialityAttr_Total", "JectivityAttr_None"],
+$              {"DomainInt":
+$                   [{"TagInt": []},
+$                    [{"RangeBounded":
+$                          [{"Constant": {"ConstantInt": [{"TagInt": []}, 1]}},
+$                           {"Reference": [{"Name": "numItems"}, null]}]}]]},
+$              {"DomainInt": [{"TagInt": []}, []]}]}],
+$       [{"Name": "bag1"},
+$        {"DomainSet":
+$             [[], {"SizeAttr_None": []},
+$              {"DomainInt":
+$                   [{"TagInt": []},
+$                    [{"RangeBounded":
+$                          [{"Constant": {"ConstantInt": [{"TagInt": []}, 1]}},
+$                           {"Reference": [{"Name": "numItems"}, null]}]}]]}]}],
+$       [{"Name": "bag2"},
+$        {"DomainSet":
+$             [[], {"SizeAttr_None": []},
+$              {"DomainInt":
+$                   [{"TagInt": []},
+$                    [{"RangeBounded":
+$                          [{"Constant": {"ConstantInt": [{"TagInt": []}, 1]}},
+$                           {"Reference": [{"Name": "numItems"}, null]}]}]]}]}]],
+$  "trailGeneralised":
+$      [[8266647930256324907, -1691634886761992534], [4269618045413288539, -7855426160145075638],
+$       [5967260949313297361, 397780949945234163], [3430378446371175876, 766652415561148102],
+$       [-6644479869452197332, 1531845367071913439], [6692086164360044956, -8377669912709687960],
+$       [7630164101971125549, 1298433791355375627], [-1696334351587985548, 8455207677332332904],
+$       [-9102778386073203942, 4134730891421647563], [4286159222061631154, -4619660532205082092],
+$       [4682878380884092915, -4402401500703678197], [1594642527336284162, 766652415561148102],
+$       [7370260445881889506, 5983716787637816243], [-5754105240118977684, 3888841970027368098],
+$       [-1857957344885424177, -5208425228217579229], [4173110415945498506, 8455207677332332904],
+$       [2895232614784292384, 6852330547933248727], [7856038122409807138, 7682618791640382494],
+$       [5280195927277154977, -6873460516526338529], [2792790929716386615, -5117797855133986139],
+$       [8895089670082478596, 4901967445469669252], [-7421645189136360829, 241163938960814201],
+$       [-7616864931876883879, -798852565990385336], [-3406543633717575383, -260092109166002184],
+$       [-2719636312439529891, -2786222863567463761], [-28531138129566661, -6719556934525479766],
+$       [5140067627177665258, 7648536376135103068], [7216141377737488418, -8033250179680285911],
+$       [-6145542772189638778, 294778609219124632], [-1771190750737835442, 3891529015726170021],
+$       [-1331013451357911817, 4126579048053178620], [1672971684839307287, -897381283279163550],
+$       [-4257405634869931702, -8329460564084613237], [9029526119008349575, 2300885545147104783],
+$       [3981443418854254412, 2066533573159933359], [-3413801742341811893, -9166596748687592459],
+$       [-1540057894209536768, 9155905616984201828], [-1231221212233234753, 6974599349954485152],
+$       [-5615676392060802058, -8807052422931912332], [5337321014454198845, 5778719259770357248],
+$       [-4894401536737872996, 5668485079573765364], [-3254467883099200877, -5420071290108198448],
+$       [-8940990002979762542, 4110457826774952372], [-3722262881154758639, 6794018145404485952],
+$       [-2096436864300425108, 5666562031275655310], [1391725996931715816, -2717752761680935708]],
+$  "trailVerbose": [], "trailRewrites": []}

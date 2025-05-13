@@ -1,0 +1,4 @@
+language Essence 1.3
+
+letting bag1 be {2, 6, 9}
+letting bag2 be {1, 4, 8}

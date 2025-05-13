@@ -1,0 +1,17 @@
+language ESSENCE' 1.0
+
+letting numItems be 11
+letting impacts_Function1D be [8, 7, 8, 8, 8, 7, 9, 10, 7, 4, 5; int(1..11)]
+letting weights_Function1D be [500, 500, 600, 200, 1000, 700, 900, 1000, 500, 1000, 700; int(1..11)]
+letting weightLimit be 6000
+letting volumes_Function1D be [1000, 1000, 1500, 500, 1500, 1000, 1600, 1200, 700, 2000, 1000; int(1..11)]
+letting volumeLimit be 6000
+letting fin1 be 11
+letting fin2 be 200
+letting fin3 be 1000
+letting fin4 be 11
+letting fin5 be 500
+letting fin6 be 2000
+letting fin7 be 11
+letting fin8 be 4
+letting fin9 be 10

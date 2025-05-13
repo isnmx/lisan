@@ -1,0 +1,173 @@
+MINION 3
+# CSETopLevel_number = 0
+# CSETopLevel_eliminated_expressions = 0
+# CSETopLevel_total_size = 0
+# CSE_active_number = 2
+# CSE_active_eliminated_expressions = 7
+# CSE_active_total_size = 26
+**VARIABLES**
+BOOL bag1_Occurrence_00001 #
+BOOL bag1_Occurrence_00002 #
+BOOL bag1_Occurrence_00003 #
+BOOL bag1_Occurrence_00004 #
+BOOL bag1_Occurrence_00005 #
+BOOL bag1_Occurrence_00006 #
+BOOL bag1_Occurrence_00007 #
+BOOL bag1_Occurrence_00008 #
+BOOL bag1_Occurrence_00009 #
+BOOL bag1_Occurrence_00010 #
+BOOL bag1_Occurrence_00011 #
+BOOL bag2_Occurrence_00001 #
+BOOL bag2_Occurrence_00002 #
+BOOL bag2_Occurrence_00003 #
+BOOL bag2_Occurrence_00004 #
+BOOL bag2_Occurrence_00005 #
+BOOL bag2_Occurrence_00006 #
+BOOL bag2_Occurrence_00007 #
+BOOL bag2_Occurrence_00008 #
+BOOL bag2_Occurrence_00009 #
+BOOL bag2_Occurrence_00010 #
+BOOL bag2_Occurrence_00011 #
+DISCRETE aux0 #((bag1_Occurrence_00001 * (8*bag2_Occurrence_00001 + 7*bag2_Occurrence_00002 + 8*bag2_Occurrence_00003 + 8*bag2_Occurrence_00004 + 8*bag2_Occurrence_00005 + 7*bag2_Occurrence_00006 + 9*bag2_Occurrence_00007 + 10*bag2_Occurrence_00008 + 7*bag2_Occurrence_00009 + 4*bag2_Occurrence_00010 + 5*bag2_Occurrence_00011 + 8)) + (bag1_Occurrence_00002 * (8*bag2_Occurrence_00001 + 7*bag2_Occurrence_00002 + 8*bag2_Occurrence_00003 + 8*bag2_Occurrence_00004 + 8*bag2_Occurrence_00005 + 7*bag2_Occurrence_00006 + 9*bag2_Occurrence_00007 + 10*bag2_Occurrence_00008 + 7*bag2_Occurrence_00009 + 4*bag2_Occurrence_00010 + 5*bag2_Occurrence_00011 + 7)) + (bag1_Occurrence_00003 * (8*bag2_Occurrence_00001 + 7*bag2_Occurrence_00002 + 8*bag2_Occurrence_00003 + 8*bag2_Occurrence_00004 + 8*bag2_Occurrence_00005 + 7*bag2_Occurrence_00006 + 9*bag2_Occurrence_00007 + 10*bag2_Occurrence_00008 + 7*bag2_Occurrence_00009 + 4*bag2_Occurrence_00010 + 5*bag2_Occurrence_00011 + 8)) + (bag1_Occurrence_00004 * (8*bag2_Occurrence_00001 + 7*bag2_Occurrence_00002 + 8*bag2_Occurrence_00003 + 8*bag2_Occurrence_00004 + 8*bag2_Occurrence_00005 + 7*bag2_Occurrence_00006 + 9*bag2_Occurrence_00007 + 10*bag2_Occurrence_00008 + 7*bag2_Occurrence_00009 + 4*bag2_Occurrence_00010 + 5*bag2_Occurrence_00011 + 8)) + (bag1_Occurrence_00005 * (8*bag2_Occurrence_00001 + 7*bag2_Occurrence_00002 + 8*bag2_Occurrence_00003 + 8*bag2_Occurrence_00004 + 8*bag2_Occurrence_00005 + 7*bag2_Occurrence_00006 + 9*bag2_Occurrence_00007 + 10*bag2_Occurrence_00008 + 7*bag2_Occurrence_00009 + 4*bag2_Occurrence_00010 + 5*bag2_Occurrence_00011 + 8)) + (bag1_Occurrence_00006 * (8*bag2_Occurrence_00001 + 7*bag2_Occurrence_00002 + 8*bag2_Occurrence_00003 + 8*bag2_Occurrence_00004 + 8*bag2_Occurrence_00005 + 7*bag2_Occurrence_00006 + 9*bag2_Occurrence_00007 + 10*bag2_Occurrence_00008 + 7*bag2_Occurrence_00009 + 4*bag2_Occurrence_00010 + 5*bag2_Occurrence_00011 + 7)) + (bag1_Occurrence_00007 * (8*bag2_Occurrence_00001 + 7*bag2_Occurrence_00002 + 8*bag2_Occurrence_00003 + 8*bag2_Occurrence_00004 + 8*bag2_Occurrence_00005 + 7*bag2_Occurrence_00006 + 9*bag2_Occurrence_00007 + 10*bag2_Occurrence_00008 + 7*bag2_Occurrence_00009 + 4*bag2_Occurrence_00010 + 5*bag2_Occurrence_00011 + 9)) + (bag1_Occurrence_00008 * (8*bag2_Occurrence_00001 + 7*bag2_Occurrence_00002 + 8*bag2_Occurrence_00003 + 8*bag2_Occurrence_00004 + 8*bag2_Occurrence_00005 + 7*bag2_Occurrence_00006 + 9*bag2_Occurrence_00007 + 10*bag2_Occurrence_00008 + 7*bag2_Occurrence_00009 + 4*bag2_Occurrence_00010 + 5*bag2_Occurrence_00011 + 10)) + (bag1_Occurrence_00009 * (8*bag2_Occurrence_00001 + 7*bag2_Occurrence_00002 + 8*bag2_Occurrence_00003 + 8*bag2_Occurrence_00004 + 8*bag2_Occurrence_00005 + 7*bag2_Occurrence_00006 + 9*bag2_Occurrence_00007 + 10*bag2_Occurrence_00008 + 7*bag2_Occurrence_00009 + 4*bag2_Occurrence_00010 + 5*bag2_Occurrence_00011 + 7)) + (bag1_Occurrence_00010 * (8*bag2_Occurrence_00001 + 7*bag2_Occurrence_00002 + 8*bag2_Occurrence_00003 + 8*bag2_Occurrence_00004 + 8*bag2_Occurrence_00005 + 7*bag2_Occurrence_00006 + 9*bag2_Occurrence_00007 + 10*bag2_Occurrence_00008 + 7*bag2_Occurrence_00009 + 4*bag2_Occurrence_00010 + 5*bag2_Occurrence_00011 + 4)) + (bag1_Occurrence_00011 * (8*bag2_Occurrence_00001 + 7*bag2_Occurrence_00002 + 8*bag2_Occurrence_00003 + 8*bag2_Occurrence_00004 + 8*bag2_Occurrence_00005 + 7*bag2_Occurrence_00006 + 9*bag2_Occurrence_00007 + 10*bag2_Occurrence_00008 + 7*bag2_Occurrence_00009 + 4*bag2_Occurrence_00010 + 5*bag2_Occurrence_00011 + 5)))
+{0..711}
+**CONSTRAINTS**
+w-inintervalset(aux0, [0,0,4,5,7,711])
+**VARIABLES**
+DISCRETE aux1 #Active-CSE: 4 occurrences of this expression or equivalent: (8*bag2_Occurrence_00001 + 7*bag2_Occurrence_00002 + 8*bag2_Occurrence_00003 + 8*bag2_Occurrence_00004 + 8*bag2_Occurrence_00005 + 7*bag2_Occurrence_00006 + 9*bag2_Occurrence_00007 + 10*bag2_Occurrence_00008 + 7*bag2_Occurrence_00009 + 4*bag2_Occurrence_00010 + 5*bag2_Occurrence_00011 + 8)
+{8..79}
+**CONSTRAINTS**
+w-inintervalset(aux1, [8,8,12,13,15,79])
+**VARIABLES**
+DISCRETE aux2 #Active-CSE: 3 occurrences of this expression or equivalent: (8*bag2_Occurrence_00001 + 7*bag2_Occurrence_00002 + 8*bag2_Occurrence_00003 + 8*bag2_Occurrence_00004 + 8*bag2_Occurrence_00005 + 7*bag2_Occurrence_00006 + 9*bag2_Occurrence_00007 + 10*bag2_Occurrence_00008 + 7*bag2_Occurrence_00009 + 4*bag2_Occurrence_00010 + 5*bag2_Occurrence_00011 + 7)
+{7..78}
+**CONSTRAINTS**
+w-inintervalset(aux2, [7,7,11,12,14,78])
+**VARIABLES**
+DISCRETE aux3 #(8*bag2_Occurrence_00001 + 7*bag2_Occurrence_00002 + 8*bag2_Occurrence_00003 + 8*bag2_Occurrence_00004 + 8*bag2_Occurrence_00005 + 7*bag2_Occurrence_00006 + 9*bag2_Occurrence_00007 + 10*bag2_Occurrence_00008 + 7*bag2_Occurrence_00009 + 4*bag2_Occurrence_00010 + 5*bag2_Occurrence_00011 + 4)
+{4..75}
+**CONSTRAINTS**
+w-inintervalset(aux3, [4,4,8,9,11,75])
+**VARIABLES**
+DISCRETE aux4 #(aux3 * bag1_Occurrence_00010)
+{0..72}
+**CONSTRAINTS**
+w-inintervalset(aux4, [0,0,4,4,8,9,11,72])
+**VARIABLES**
+DISCRETE aux5 #(8*bag2_Occurrence_00001 + 7*bag2_Occurrence_00002 + 8*bag2_Occurrence_00003 + 8*bag2_Occurrence_00004 + 8*bag2_Occurrence_00005 + 7*bag2_Occurrence_00006 + 9*bag2_Occurrence_00007 + 10*bag2_Occurrence_00008 + 7*bag2_Occurrence_00009 + 4*bag2_Occurrence_00010 + 5*bag2_Occurrence_00011 + 5)
+{5..76}
+**CONSTRAINTS**
+w-inintervalset(aux5, [5,5,9,10,12,76])
+**VARIABLES**
+DISCRETE aux6 #(aux5 * bag1_Occurrence_00011)
+{0..71}
+**CONSTRAINTS**
+w-inintervalset(aux6, [0,0,5,5,9,10,12,71])
+**VARIABLES**
+DISCRETE aux7 #(8*bag2_Occurrence_00001 + 7*bag2_Occurrence_00002 + 8*bag2_Occurrence_00003 + 8*bag2_Occurrence_00004 + 8*bag2_Occurrence_00005 + 7*bag2_Occurrence_00006 + 9*bag2_Occurrence_00007 + 10*bag2_Occurrence_00008 + 7*bag2_Occurrence_00009 + 4*bag2_Occurrence_00010 + 5*bag2_Occurrence_00011 + 9)
+{9..80}
+**CONSTRAINTS**
+w-inintervalset(aux7, [9,9,13,14,16,80])
+**VARIABLES**
+DISCRETE aux8 #(aux7 * bag1_Occurrence_00007)
+{0..71}
+**CONSTRAINTS**
+w-inintervalset(aux8, [0,0,9,9,13,14,16,71])
+**VARIABLES**
+DISCRETE aux9 #(8*bag2_Occurrence_00001 + 7*bag2_Occurrence_00002 + 8*bag2_Occurrence_00003 + 8*bag2_Occurrence_00004 + 8*bag2_Occurrence_00005 + 7*bag2_Occurrence_00006 + 9*bag2_Occurrence_00007 + 10*bag2_Occurrence_00008 + 7*bag2_Occurrence_00009 + 4*bag2_Occurrence_00010 + 5*bag2_Occurrence_00011 + 10)
+{10..81}
+**CONSTRAINTS**
+w-inintervalset(aux9, [10,10,14,15,17,81])
+**VARIABLES**
+DISCRETE aux10 #(aux9 * bag1_Occurrence_00008)
+{0..72}
+**CONSTRAINTS**
+w-inintervalset(aux10, [0,0,10,10,14,15,17,72])
+**VARIABLES**
+DISCRETE aux11 #(aux1 * bag1_Occurrence_00001)
+{0..71}
+**CONSTRAINTS**
+w-inintervalset(aux11, [0,0,8,8,12,13,15,71])
+**VARIABLES**
+DISCRETE aux12 #(aux1 * bag1_Occurrence_00003)
+{0..71}
+**CONSTRAINTS**
+w-inintervalset(aux12, [0,0,8,8,12,13,15,71])
+**VARIABLES**
+DISCRETE aux13 #(aux1 * bag1_Occurrence_00004)
+{0..71}
+**CONSTRAINTS**
+w-inintervalset(aux13, [0,0,8,8,12,13,15,71])
+**VARIABLES**
+DISCRETE aux14 #(aux1 * bag1_Occurrence_00005)
+{0..71}
+**CONSTRAINTS**
+w-inintervalset(aux14, [0,0,8,8,12,13,15,71])
+**VARIABLES**
+DISCRETE aux15 #(aux2 * bag1_Occurrence_00002)
+{0..71}
+**CONSTRAINTS**
+w-inintervalset(aux15, [0,0,7,7,11,12,14,71])
+**VARIABLES**
+DISCRETE aux16 #(aux2 * bag1_Occurrence_00006)
+{0..71}
+**CONSTRAINTS**
+w-inintervalset(aux16, [0,0,7,7,11,12,14,71])
+**VARIABLES**
+DISCRETE aux17 #(aux2 * bag1_Occurrence_00009)
+{0..71}
+**CONSTRAINTS**
+w-inintervalset(aux17, [0,0,7,7,11,12,14,71])
+**VARIABLES**
+**VARIABLES**
+ALIAS weights_Function1D[11]=[500, 500, 600, 200, 1000, 700, 900, 1000, 500, 1000, 700]
+**VARIABLES**
+ALIAS volumes_Function1D[11]=[1000, 1000, 1500, 500, 1500, 1000, 1600, 1200, 700, 2000, 1000]
+**VARIABLES**
+ALIAS impacts_Function1D[11]=[8, 7, 8, 8, 8, 7, 9, 10, 7, 4, 5]
+**SEARCH**
+PRINT[[bag1_Occurrence_00001],[bag1_Occurrence_00002],[bag1_Occurrence_00003],[bag1_Occurrence_00004],[bag1_Occurrence_00005],[bag1_Occurrence_00006],[bag1_Occurrence_00007],[bag1_Occurrence_00008],[bag1_Occurrence_00009],[bag1_Occurrence_00010],[bag1_Occurrence_00011],[bag2_Occurrence_00001],[bag2_Occurrence_00002],[bag2_Occurrence_00003],[bag2_Occurrence_00004],[bag2_Occurrence_00005],[bag2_Occurrence_00006],[bag2_Occurrence_00007],[bag2_Occurrence_00008],[bag2_Occurrence_00009],[bag2_Occurrence_00010],[bag2_Occurrence_00011],[aux0]]
+MAXIMISING aux0
+VARORDER STATIC [bag1_Occurrence_00001, bag1_Occurrence_00002, bag1_Occurrence_00003, bag1_Occurrence_00004, bag1_Occurrence_00005, bag1_Occurrence_00006, bag1_Occurrence_00007, bag1_Occurrence_00008, bag1_Occurrence_00009, bag1_Occurrence_00010, bag1_Occurrence_00011, bag2_Occurrence_00001, bag2_Occurrence_00002, bag2_Occurrence_00003, bag2_Occurrence_00004, bag2_Occurrence_00005, bag2_Occurrence_00006, bag2_Occurrence_00007, bag2_Occurrence_00008, bag2_Occurrence_00009, bag2_Occurrence_00010, bag2_Occurrence_00011]
+VARORDER STATIC [bag1_Occurrence_00001,bag1_Occurrence_00002,bag1_Occurrence_00003,bag1_Occurrence_00004,bag1_Occurrence_00005,bag1_Occurrence_00006,bag1_Occurrence_00007,bag1_Occurrence_00008,bag1_Occurrence_00009,bag1_Occurrence_00010,bag1_Occurrence_00011,bag2_Occurrence_00001,bag2_Occurrence_00002,bag2_Occurrence_00003,bag2_Occurrence_00004,bag2_Occurrence_00005,bag2_Occurrence_00006,bag2_Occurrence_00007,bag2_Occurrence_00008,bag2_Occurrence_00009,bag2_Occurrence_00010,bag2_Occurrence_00011,aux0,aux1,aux2,aux3,aux4,aux5,aux6,aux7,aux8,aux9,aux10,aux11,aux12,aux13,aux14,aux15,aux16,aux17]
+**CONSTRAINTS**
+product(aux3, bag1_Occurrence_00010, aux4)
+product(aux5, bag1_Occurrence_00011, aux6)
+product(aux7, bag1_Occurrence_00007, aux8)
+product(aux9, bag1_Occurrence_00008, aux10)
+product(aux1, bag1_Occurrence_00001, aux11)
+product(aux1, bag1_Occurrence_00003, aux12)
+product(aux1, bag1_Occurrence_00004, aux13)
+product(aux1, bag1_Occurrence_00005, aux14)
+product(aux2, bag1_Occurrence_00002, aux15)
+product(aux2, bag1_Occurrence_00006, aux16)
+product(aux2, bag1_Occurrence_00009, aux17)
+weightedsumleq([5,5,6,2,10,7,9,10,5,10,7],[bag1_Occurrence_00001,bag1_Occurrence_00002,bag1_Occurrence_00003,bag1_Occurrence_00004,bag1_Occurrence_00005,bag1_Occurrence_00006,bag1_Occurrence_00007,bag1_Occurrence_00008,bag1_Occurrence_00009,bag1_Occurrence_00010,bag1_Occurrence_00011],30)
+weightedsumleq([10,10,15,5,15,10,16,12,7,20,10],[bag1_Occurrence_00001,bag1_Occurrence_00002,bag1_Occurrence_00003,bag1_Occurrence_00004,bag1_Occurrence_00005,bag1_Occurrence_00006,bag1_Occurrence_00007,bag1_Occurrence_00008,bag1_Occurrence_00009,bag1_Occurrence_00010,bag1_Occurrence_00011],30)
+watched-or({w-literal(bag2_Occurrence_00001,0),w-literal(bag1_Occurrence_00001,0)})
+watched-or({w-literal(bag2_Occurrence_00002,0),w-literal(bag1_Occurrence_00002,0)})
+watched-or({w-literal(bag2_Occurrence_00003,0),w-literal(bag1_Occurrence_00003,0)})
+watched-or({w-literal(bag2_Occurrence_00004,0),w-literal(bag1_Occurrence_00004,0)})
+watched-or({w-literal(bag2_Occurrence_00005,0),w-literal(bag1_Occurrence_00005,0)})
+watched-or({w-literal(bag2_Occurrence_00006,0),w-literal(bag1_Occurrence_00006,0)})
+watched-or({w-literal(bag2_Occurrence_00007,0),w-literal(bag1_Occurrence_00007,0)})
+watched-or({w-literal(bag2_Occurrence_00008,0),w-literal(bag1_Occurrence_00008,0)})
+watched-or({w-literal(bag2_Occurrence_00009,0),w-literal(bag1_Occurrence_00009,0)})
+watched-or({w-literal(bag2_Occurrence_00010,0),w-literal(bag1_Occurrence_00010,0)})
+watched-or({w-literal(bag2_Occurrence_00011,0),w-literal(bag1_Occurrence_00011,0)})
+weightedsumleq([5,5,6,2,10,7,9,10,5,10,7],[bag2_Occurrence_00001,bag2_Occurrence_00002,bag2_Occurrence_00003,bag2_Occurrence_00004,bag2_Occurrence_00005,bag2_Occurrence_00006,bag2_Occurrence_00007,bag2_Occurrence_00008,bag2_Occurrence_00009,bag2_Occurrence_00010,bag2_Occurrence_00011],30)
+weightedsumleq([10,10,15,5,15,10,16,12,7,20,10],[bag2_Occurrence_00001,bag2_Occurrence_00002,bag2_Occurrence_00003,bag2_Occurrence_00004,bag2_Occurrence_00005,bag2_Occurrence_00006,bag2_Occurrence_00007,bag2_Occurrence_00008,bag2_Occurrence_00009,bag2_Occurrence_00010,bag2_Occurrence_00011],30)
+weightedsumleq([8,7,8,8,8,7,9,10,7,4,5,1],[bag2_Occurrence_00001,bag2_Occurrence_00002,bag2_Occurrence_00003,bag2_Occurrence_00004,bag2_Occurrence_00005,bag2_Occurrence_00006,bag2_Occurrence_00007,bag2_Occurrence_00008,bag2_Occurrence_00009,bag2_Occurrence_00010,bag2_Occurrence_00011,4],aux3)
+weightedsumgeq([8,7,8,8,8,7,9,10,7,4,5,1],[bag2_Occurrence_00001,bag2_Occurrence_00002,bag2_Occurrence_00003,bag2_Occurrence_00004,bag2_Occurrence_00005,bag2_Occurrence_00006,bag2_Occurrence_00007,bag2_Occurrence_00008,bag2_Occurrence_00009,bag2_Occurrence_00010,bag2_Occurrence_00011,4],aux3)
+weightedsumleq([8,7,8,8,8,7,9,10,7,4,5,1],[bag2_Occurrence_00001,bag2_Occurrence_00002,bag2_Occurrence_00003,bag2_Occurrence_00004,bag2_Occurrence_00005,bag2_Occurrence_00006,bag2_Occurrence_00007,bag2_Occurrence_00008,bag2_Occurrence_00009,bag2_Occurrence_00010,bag2_Occurrence_00011,5],aux5)
+weightedsumgeq([8,7,8,8,8,7,9,10,7,4,5,1],[bag2_Occurrence_00001,bag2_Occurrence_00002,bag2_Occurrence_00003,bag2_Occurrence_00004,bag2_Occurrence_00005,bag2_Occurrence_00006,bag2_Occurrence_00007,bag2_Occurrence_00008,bag2_Occurrence_00009,bag2_Occurrence_00010,bag2_Occurrence_00011,5],aux5)
+weightedsumleq([8,7,8,8,8,7,9,10,7,4,5,1],[bag2_Occurrence_00001,bag2_Occurrence_00002,bag2_Occurrence_00003,bag2_Occurrence_00004,bag2_Occurrence_00005,bag2_Occurrence_00006,bag2_Occurrence_00007,bag2_Occurrence_00008,bag2_Occurrence_00009,bag2_Occurrence_00010,bag2_Occurrence_00011,9],aux7)
+weightedsumgeq([8,7,8,8,8,7,9,10,7,4,5,1],[bag2_Occurrence_00001,bag2_Occurrence_00002,bag2_Occurrence_00003,bag2_Occurrence_00004,bag2_Occurrence_00005,bag2_Occurrence_00006,bag2_Occurrence_00007,bag2_Occurrence_00008,bag2_Occurrence_00009,bag2_Occurrence_00010,bag2_Occurrence_00011,9],aux7)
+weightedsumleq([8,7,8,8,8,7,9,10,7,4,5,1],[bag2_Occurrence_00001,bag2_Occurrence_00002,bag2_Occurrence_00003,bag2_Occurrence_00004,bag2_Occurrence_00005,bag2_Occurrence_00006,bag2_Occurrence_00007,bag2_Occurrence_00008,bag2_Occurrence_00009,bag2_Occurrence_00010,bag2_Occurrence_00011,10],aux9)
+weightedsumgeq([8,7,8,8,8,7,9,10,7,4,5,1],[bag2_Occurrence_00001,bag2_Occurrence_00002,bag2_Occurrence_00003,bag2_Occurrence_00004,bag2_Occurrence_00005,bag2_Occurrence_00006,bag2_Occurrence_00007,bag2_Occurrence_00008,bag2_Occurrence_00009,bag2_Occurrence_00010,bag2_Occurrence_00011,10],aux9)
+weightedsumleq([8,7,8,8,8,7,9,10,7,4,5,1],[bag2_Occurrence_00001,bag2_Occurrence_00002,bag2_Occurrence_00003,bag2_Occurrence_00004,bag2_Occurrence_00005,bag2_Occurrence_00006,bag2_Occurrence_00007,bag2_Occurrence_00008,bag2_Occurrence_00009,bag2_Occurrence_00010,bag2_Occurrence_00011,8],aux1)
+weightedsumgeq([8,7,8,8,8,7,9,10,7,4,5,1],[bag2_Occurrence_00001,bag2_Occurrence_00002,bag2_Occurrence_00003,bag2_Occurrence_00004,bag2_Occurrence_00005,bag2_Occurrence_00006,bag2_Occurrence_00007,bag2_Occurrence_00008,bag2_Occurrence_00009,bag2_Occurrence_00010,bag2_Occurrence_00011,8],aux1)
+weightedsumleq([8,7,8,8,8,7,9,10,7,4,5,1],[bag2_Occurrence_00001,bag2_Occurrence_00002,bag2_Occurrence_00003,bag2_Occurrence_00004,bag2_Occurrence_00005,bag2_Occurrence_00006,bag2_Occurrence_00007,bag2_Occurrence_00008,bag2_Occurrence_00009,bag2_Occurrence_00010,bag2_Occurrence_00011,7],aux2)
+weightedsumgeq([8,7,8,8,8,7,9,10,7,4,5,1],[bag2_Occurrence_00001,bag2_Occurrence_00002,bag2_Occurrence_00003,bag2_Occurrence_00004,bag2_Occurrence_00005,bag2_Occurrence_00006,bag2_Occurrence_00007,bag2_Occurrence_00008,bag2_Occurrence_00009,bag2_Occurrence_00010,bag2_Occurrence_00011,7],aux2)
+sumleq([aux4,aux6,aux8,aux10,aux11,aux12,aux13,aux14,aux15,aux16,aux17],aux0)
+sumgeq([aux4,aux6,aux8,aux10,aux11,aux12,aux13,aux14,aux15,aux16,aux17],aux0)
+**EOF**

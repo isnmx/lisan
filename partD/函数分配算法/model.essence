@@ -1,0 +1,22 @@
+language Essence 1.3
+
+given weightLimit, volumeLimit : int
+given numItems : int
+
+letting ITEMS be domain int(1..numItems)
+
+given weights : function (total) ITEMS --> int
+given volumes : function (total) ITEMS --> int
+given impacts : function (total) ITEMS --> int
+
+find assignment : function ITEMS --> int(0..2)
+
+maximising sum i : ITEMS . impacts(i) * toInt(assignment(i) > 0)
+
+such that
+
+    (sum i : ITEMS . weights(i) * toInt(assignment(i) = 1)) <= weightLimit / 2,
+    (sum i : ITEMS . volumes(i) * toInt(assignment(i) = 1)) <= volumeLimit / 2,
+    
+    (sum i : ITEMS . weights(i) * toInt(assignment(i) = 2)) <= weightLimit / 2,
+    (sum i : ITEMS . volumes(i) * toInt(assignment(i) = 2)) <= volumeLimit / 2
